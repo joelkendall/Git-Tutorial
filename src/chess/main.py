@@ -61,8 +61,17 @@ class ValidMoveGenerator(object):
         pass
        
     def Rook(self, x, y, grid):
-        pass
-
+        for i in range (y + 1, 8):
+            if grid[x][i] == 0:
+                self.vMoves.append([x, i])
+            elif not self.sameColor(x, i, grid):
+                self.vMoves.append([x, i])
+                break
+            else:
+                break
+        
+            
+            
     def Bishop(self, x, y, grid):
         pass
 
